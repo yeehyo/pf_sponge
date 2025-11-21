@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 페이지 만들어보기</title>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: antiquewhite;
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header h1{
+            text-align: center;
+            margin: 2rem auto;
+            font-size: 4rem;
+            color: rgb(255, 120, 42);
+        }
+        section h2{
+            text-align: center;
+            margin: 2rem auto;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .keyword-box{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .gradient-bar{
+            width: 60vh;
+            height: 3rem;
+            background: #F7971E;  /* fallback for old browsers */
+            background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            margin: 0 auto;
+        }
+
+        .img-grid{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap; /*플루이드 웹 : 툭툭 떨어지게*/
+        }
+
+        .like-list{
+            width: 200px;
+            text-align: center;
+        }
+        .like-list img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: all .3s;
+            filter: sepia(100%);
+        }
+        .like-list img:hover{
+            filter: sepia(0%);
+            scale: 110%;
+            
+        }
+
+        /* Contact */
+        footer{
+        margin-top:60px;
+        background:#000;
+        padding:30px 0;
+        color:#fff;
+        }
+        footer ul{display:flex; justify-content:center; gap:40px;}
+
+        @media screen and (max-width:480px){
+            .img-grid{
+                flex-direction: column;
+                align-items: center;
+            }
+            .like-list{
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:481px) and (max-width:1023px){
+            .like-list{
+                width: 45%;
+            }
+        }
+        /* @media screen and (min-width:1024px) {
+            .like-list{
+               
+            }
+        }*/
+    </style>
+</head>
+<body>
+     <header>
+ <h1>SpongeBob<br>SquarePants</h1>
+ </header>
+        <section>
+            <h2>My Keyword</h2>
+              <ul class="keyword-box">
+                <li class="keyword-list">해면동물</li>
+                <li class="keyword-list">산만한</li>
+                <li class="keyword-list">긍정적인</li>
+                <li class="keyword-list">워커홀릭</li>
+              </ul>
+        </section>
+        <section>
+            <h2>My Color</h2>
+              <div class="gradient-bar"></div>
+        </section>
+        <section>
+            <h2>My Hobby</h2>
+              <ul class="img-grid">
+                <li class="like-list"><img src="https://i.pinimg.com/1200x/bb/66/38/bb6638b900bae05f4d90aab6cd6174f7.jpg" alt=" ">일하기</li>
+                <li class="like-list"><img src="https://i.pinimg.com/1200x/af/18/c8/af18c8827434ca33cc53ab7f22805813.jpg" alt=" ">해파리 사냥</li>
+                <li class="like-list"><img src="https://i.pinimg.com/736x/0c/ce/3d/0cce3d86bc68f755a4579b03bc92f5d5.jpg" alt=" ">비눗방울 불기</li>
+                <li class="like-list"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdYRdRC%2Fbtq9Pow9zrS%2FAAAAAAAAAAAAAAAAAAAAALMaDLUO0xtjeEvaEotNWLhWp5DGUp3c1_9cgGPkuloO%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1764514799%26allow_ip%3D%26allow_referer%3D%26signature%3DL%252FT8pXGcAaBTa2UJtOsmqb8Z720%253D" alt=" ">TV 보기</li>  
+              </ul>
+        </section>
+        <section>
+            <h2>My Food</h2>
+              <ul class="img-grid">
+                <li class="like-list"><img src="https://i.pinimg.com/736x/26/e4/6a/26e46a7250212a6819c7a0f171618017.jpg" alt=" ">게살버거</li>
+                <li class="like-list"><img src="https://i.pinimg.com/736x/be/60/22/be60225db633b3aad8040b3cb65e8094.jpg" alt=" ">아이스크림</li>
+                <li class="like-list"><img src="https://i.pinimg.com/736x/f0/06/60/f00660f9e5733f1b32e0ff9f7a4f85e9.jpg" alt=" ">피클</li>
+                <li class="like-list"><img src="https://i.pinimg.com/736x/c1/07/80/c10780fa2f5ff1a212c235c1eb623154.jpg" alt=" ">팝콘</li>
+              </ul>
+        </section>
+        <footer>
+          <address>
+            <h2>Contact</h2>
+              <ul>
+                <li class="contact-list">OOO-OOOO-OOOO</li>
+                <li class="contact-list">aOO@OOO.com</li>
+              </ul>
+          </address>
+        </footer>
+</body>
+</html>
